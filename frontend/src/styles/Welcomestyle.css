@@ -1,0 +1,139 @@
+.welcomeStyle {
+    font-size: 30px;
+    font-style: italic;
+    margin-left: 93px;
+    margin-top: 30px;
+    font-family: Arial;
+    margin-bottom: 25px;
+    color:blueviolet;
+    font-weight: 600;
+}
+
+.buttonStyle {
+    margin-left: 10px;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-color: aliceblue;
+    font-family: Arial;
+}
+
+.buttonStyle:hover {
+    color: blue;
+    font-weight: 600;
+}
+
+.titleStyle {
+    font-size: 21px;
+    margin-left: 10px;
+    font-family: Arial;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.spanStyle {
+    margin-left: 10px;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 600;
+    font-family: Arial;
+}
+
+.clickBook {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+.clickBook:hover {
+    color: blue;
+    font-weight: 700;
+}
+
+.svgStyle {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: 600;
+    color:black;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+.spanStyle2 {
+    margin-left: 5px;
+    font-size: 19px;
+    margin-bottom: 5px;
+    font-family: Arial;
+}
+
+.buttonStyle2 {
+    margin-left: 10px;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-color: aliceblue;
+    font-weight: 600;
+    font-family: Arial;
+}
+
+.buttonStyle2:hover {
+    color: blue;
+}
+
+.buttonStyle-filter {
+    margin-left: 10px;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 18px;
+    font-size: 18px;
+    cursor: pointer;
+    border-color: aliceblue;
+    font-family: Arial;
+}
+
+.buttonStyle-filter:hover {
+    color: blue;
+    font-weight: 600;
+}
+
+.buttonStyle-booklist {
+    margin-left: 10px;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    border-color: aliceblue;
+    font-family: Arial;
+    margin-bottom: 15px;
+}
+
+.buttonStyle-booklist:hover {
+    color: blue;
+    font-weight: 600;
+}
+
+.inputStyle {
+    margin-top: 12px;
+    margin-left: 5px;
+    height: 20px;
+}
+
+.goStyle {
+    margin-top: 10px;
+    margin-left: 8px;
+    border-radius: 3px;
+    border-color: aliceblue;
+    font-size: 16px;
+}

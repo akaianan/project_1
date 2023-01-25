@@ -1,0 +1,61 @@
+.backGround {
+    position: fixed;
+    width: 100%;
+    height: 960px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.backGround2 {
+    width: fit-content;
+    height: fit-content;
+    margin: 200px auto;
+    border-radius: 15px;
+    background-color: bisque;
+}
+
+.popupSpan {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.popupClose {
+    margin-left: 88%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.popupButton {
+    margin-bottom: 20px;
+    margin-left: 38%;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border-color: aliceblue;
+    font-family: Arial;
+}
+
+.popupButton:hover {
+    color: blue;
+    font-weight: 600;
+}
+
+.buttonStyle3 {
+    margin-left: 10px;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border-color: aliceblue;
+    font-family: Arial;
+}
+
+.buttonStyle3:hover {
+    color: blue;
+    font-weight: 600;
+}
