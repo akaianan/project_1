@@ -73,7 +73,7 @@ const Createlist = ({ createVisible, setCreateVisible }) => {
       alert(data.error)
     } else {
       console.log(data)
-      window.location.href = '/Hostedlistings'
+      window.location.href = '/Hostlistings'
     }
   }
 
@@ -98,7 +98,7 @@ const Createlist = ({ createVisible, setCreateVisible }) => {
           <span className='popupSpan'>Listing Video URL: </span>
           <input className='popupSpan' type='text' id='URL' onChange={(event) => setURL(event.target.value)} value ={URL} data-testid ='enter URL' /><br/>
           </div>}
-        <button className='buttonStyle3' onClick={() => setisURL(!isURL)}>
+        <button className='btnStyle3' onClick={() => setisURL(!isURL)}>
           {!isURL ? <>Turn to url</> : <>Turn to pic</>}
         </button><br/>
         {listRoomNumber.map(item => (
@@ -109,8 +109,8 @@ const Createlist = ({ createVisible, setCreateVisible }) => {
             <input type='text' className='bed-number' /><br/>
           </div>
         ))}
-        <button className='buttonStyle3' onClick={() => { setRoomNumber(roomNumber + 1) }}>Add bedroom</button>
-        <button className='buttonStyle3' onClick={() => { setRoomNumber(0) }}>back</button><br/>
+        <button className='btnStyle3' onClick={() => { setRoomNumber(roomNumber + 1) }}>Add bedroom</button>
+        <button className='btnStyle3' onClick={() => { setRoomNumber(0) }}>back</button><br/>
         <span className='popupSpan'>Number of bathrooms: </span>
         <input type='text' id='bath-number' onChange={(event) => { setBathNum(event.target.value) }} value={bathNum} /><br/>
         <span className='popupSpan'>Property amenities: </span>

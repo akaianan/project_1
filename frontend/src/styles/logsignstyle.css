@@ -1,0 +1,55 @@
+.logsign-title {
+    font-size: 36px;
+    font-style: 700;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 18px;
+    color: #19a6c4;
+}
+
+.logsign-part {
+    border: 6px solid skyblue;
+    border-radius: 3px;
+    margin: 0px auto;
+    width: 330px;
+    padding-left: 28px;
+    padding-top: 15px;
+}
+
+.logsign-input {
+    width: 290px;
+    height: 36px;
+    border: 2px solid #1a7a8e;
+    margin-top: 6px;
+    border-radius: 20px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.logsign-button {
+    margin-bottom: 26px;
+    width: 150px;
+    height: 40px;
+    margin-top: 28px;
+    margin-left: 76px;
+    border-radius: 20px;
+    background-color: #54b8cd;
+    border-color: transparent;
+    font-size: 20px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.logsign-button:hover{
+    font-weight: 600;
+    color: blue;
+    font-style: italic;
+    background-color: #28879b;
+}
+
+.logsign-word {
+    margin-top: 10px;
+    font-size: 23px;
+    font-style: italic;
+}
+

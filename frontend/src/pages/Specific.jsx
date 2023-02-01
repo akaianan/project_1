@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 
 import Bookdate from '../components/Bookdate';
+import '../styles/mainStyle.css'
+import '../styles/hoSty.css'
 
 const Specific = () => {
   const ID = localStorage.getItem('specificID')
@@ -121,46 +123,48 @@ const Specific = () => {
     <>
       {showSpecific.map(item => (
         <div key={item[1]}>
-          <div>{item[0].listing.title}</div>
-          <div>Address: {item[0].listing.address}</div>
-          <div>Amenities: {item[0].listing.metadata[4]}</div>
-          <div>Price: ${item[0].listing.price} per day</div>
+          <div className='tiStyle'>{item[0].listing.title}</div>
+          <div className='wordStyle3'>Address: {item[0].listing.address}</div>
+          <div className='wordStyle3'>Amenities: {item[0].listing.metadata[4]}</div>
+          <div className='wordStyle3'>Price: ${item[0].listing.price} per day</div>
           { /*  <img src={item[0].listing.thumbnail } /> <p>{item[0].listing.thumbnail.slice(0, 5)}</p> */ }
           { item[0].listing.thumbnail.slice(0, 4) === 'data'
             ? <img src={item[0].listing.thumbnail } />
             : <embed src={item[0].listing.thumbnail }/>}<br/>
-          <div>Type: {item[0].listing.metadata[3]}</div>
-          <div>
+          <div className='wordStyle3'>Type: {item[0].listing.metadata[3]}</div>
+          <div className='wordStyle3'>
             <span>{item[0].listing.metadata[0]} bedrooms, </span>
             <span>{item[0].listing.metadata[1]} beds, </span>
             <span>{item[0].listing.metadata[2]} bathrooms</span>
           </div>
-          <div>
+          <div className='wordStyle3'>
             available date:
             <span> from </span><span>{`${item[0].listing.availability[0]}-${item[0].listing.availability[1]}-${item[0].listing.availability[2]}`}</span>
             <span> to </span><span>{`${item[0].listing.availability[3]}-${item[0].listing.availability[4]}-${item[0].listing.availability[5]}`}</span><br/>
           </div>
-          <div>Reviews: </div>
+          <div className='wordStyle3'>Reviews: </div>
           {item[0].listing.reviews.map(item => (
             <div key={item}>
-              <div>Comment: {item[0]}</div>
-              <div><span>Rating: </span>{item[1] === '' ? <span>5</span> : <span>{item[1]}</span>}</div>
+              <div className='wordStyle3'>Comment: {item[0]}</div>
+              <div className='wordStyle3'><span>Rating: </span>{item[1] === '' ? <span>5</span> : <span>{item[1]}</span>}</div>
             </div>
           ))}
-          <button className='buttonStyle' onClick={() => { IdPrice(item[1], item[0].listing.price) }}>Book it!!</button><br/>
+          <div className='center'>
+            <button className='btnStyle' onClick={() => { IdPrice(item[1], item[0].listing.price) }}>Book it!!</button>
+          </div>
           <hr/>
           {bookVisible && <Bookdate />}
         </div>
       ))}
-      <h3>Booking history</h3>
+      <h3 className='center'>Booking history</h3>
       {allNewList.map(item => (
         <div key={item[1]}>
-          <div>{item[1]}</div>
-          <div>from {item[0].dateRange[0]} to {item[0].dateRange[1]}</div>
-          <div>total price: {item[0].totalPrice}</div>
-          <div>status: {item[0].status}</div>
+          <div className='tiStyle2'>{item[1]}</div>
+          <div className='wordStyle3'>from {item[0].dateRange[0]} to {item[0].dateRange[1]}</div>
+          <div className='wordStyle3'>total price: {item[0].totalPrice}</div>
+          <div className='wordStyle3'>status: {item[0].status}</div>
           {item[0].status === 'accepted'
-            ? <div>
+            ? <div className='wordStyle3'>
             comment: <input type="text" onChange={ (event) => setComment(event.target.value) } value={comment} />
             <form>
               <span>Rating: </span>
@@ -172,10 +176,10 @@ const Specific = () => {
                 <option>1</option>
               </select>
             </form>
-            <button onClick={ () => { submitReview(item[0].listingId, item[0].id) }}>submit</button><br/>
+            <button className='btnStyle' onClick={ () => { submitReview(item[0].listingId, item[0].id) }}>submit</button><br/>
             </div>
             : <div></div>}
-          <button onClick={ () => { deleteBook(item[0].id) }}>delete booking</button>
+          <div className='center'><button className='btnStyle' onClick={ () => { deleteBook(item[0].id) }}>delete booking</button></div>
           <hr/>
         </div>
       ))}

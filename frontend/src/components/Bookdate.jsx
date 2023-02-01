@@ -34,13 +34,14 @@ const Bookdate = (props) => {
       console.log(data.error)
     } else {
       console.log(data)
-      alert('Book success!')
+      alert('Submit book success!')
       window.location.href = '/Specific'
     }
   }
 
   return (
-    <>
+    <div className='wordStyle2'>
+      <div style={{ fontStyle: 'italic', color: 'blue' }}>Please input the date within the date range, otherwise the hosts will reject your application. </div>
       <span>from: </span><br/>
       <span>year:</span><input type='text' onChange={ (event) => setYear1(event.target.value) } value={year1} />
       <span>month:</span><input type='text' onChange={ (event) => setMonth1(event.target.value) } value={month1} />
@@ -49,9 +50,9 @@ const Bookdate = (props) => {
       <span>year:</span><input type='text' onChange={ (event) => setYear2(event.target.value) } value={year2} />
       <span>month:</span><input type='text' onChange={ (event) => setMonth2(event.target.value) } value={month2} />
       <span>day:</span><input type='text' onChange={ (event) => setDay2(event.target.value) } value={day2} /><br/>
-      <button onClick={bookList}>Submit it!!</button>
+      <button className='btnStyle' onClick={bookList}>Submit it!!</button>
       <hr/>
-    </>
+    </div>
   )
 }
 

@@ -1,41 +1,46 @@
-.welcomeStyle {
-    font-size: 30px;
+.welSty {
+    font-size: 31px;
     font-style: italic;
-    margin-left: 93px;
-    margin-top: 30px;
+    margin-top: 50px;
     font-family: Arial;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
     color:blueviolet;
     font-weight: 600;
+    text-align: center;
 }
 
-.buttonStyle {
-    margin-left: 10px;
-    border-radius: 5px;
-    height: fit-content;
-    width: fit-content;
+.btnStyle {
+    margin-left: 15px;
+    font-style: italic;
+    border-radius: 6px;
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
     border-color: aliceblue;
-    font-family: Arial;
 }
 
-.buttonStyle:hover {
-    color: blue;
+.btnStyle:hover {
+    color: #2690a5;
     font-weight: 600;
 }
 
-.titleStyle {
-    font-size: 21px;
-    margin-left: 10px;
-    font-family: Arial;
+.tiStyle {
+    text-align: center;
+    font-size: 25px;
     font-weight: 600;
-    margin-top: 15px;
+    margin-top: 18px;
     margin-bottom: 10px;
 }
 
-.spanStyle {
+.tiStyle2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.wordStyle {
     margin-left: 10px;
     font-size: 22px;
     font-style: italic;
@@ -65,31 +70,55 @@
     font-family: Arial;
 }
 
-.spanStyle2 {
-    margin-left: 5px;
-    font-size: 19px;
+.wordStyle2 {
+    text-align: center;
+    font-size: 16px;
     margin-bottom: 5px;
     font-family: Arial;
 }
 
-.buttonStyle2 {
-    margin-left: 10px;
-    border-radius: 5px;
-    height: fit-content;
-    width: fit-content;
-    margin-top: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    border-color: aliceblue;
-    font-weight: 600;
+.wordStyle3 {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 5px;
     font-family: Arial;
 }
 
-.buttonStyle2:hover {
-    color: blue;
+.filterStyle {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 12px;
+    font-family: Arial;
 }
 
-.buttonStyle-filter {
+
+.btnStyle2 {
+    margin-left: 25px;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 8px;
+    margin-top: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    border-color: antiquewhite;
+    font-weight: 600;
+}
+
+.goStyle {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-color: antiquewhite;
+    font-weight: 600;
+}
+
+.btnStyle2:hover {
+    color: #2690a5
+}
+
+.btnStyle-filter {
     margin-left: 10px;
     border-radius: 5px;
     height: fit-content;
@@ -101,12 +130,12 @@
     font-family: Arial;
 }
 
-.buttonStyle-filter:hover {
+.btnStyle-filter:hover {
     color: blue;
     font-weight: 600;
 }
 
-.buttonStyle-booklist {
+.btnStyle-booklist {
     margin-left: 10px;
     border-radius: 5px;
     height: fit-content;
@@ -119,7 +148,7 @@
     margin-bottom: 15px;
 }
 
-.buttonStyle-booklist:hover {
+.btnStyle-booklist:hover {
     color: blue;
     font-weight: 600;
 }

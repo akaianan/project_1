@@ -64,17 +64,19 @@ const Landing = () => {
       <Button variant="contained" color="success" style={ { color: 'green', marginLeft: '5px', marginTop: '5px', marginBottom: '10px' } } onClick={() => { window.location.href = '/Filter' }}>get filter</Button><br/>
       {allListing.map(item => (
         <div key={item[1]} >
-          <div>{item[0].listing.title}</div>
+          <div className='tiStyle'>{item[0].listing.title}</div>
           <div>
-            <span>{item[0].listing.metadata[0]}bedrooms, </span>
-            <span>{item[0].listing.metadata[1]}beds, </span>
-            <span>{item[0].listing.metadata[2]}bathrooms</span>
-            <div>${item[0].listing.price} per night</div>
+            <div className='wordStyle2'>
+              <span>{item[0].listing.metadata[0]}bedrooms, </span>
+              <span>{item[0].listing.metadata[1]}beds, </span>
+              <span>{item[0].listing.metadata[2]}bathrooms</span>
+            </div>
+            <div className='wordStyle2'>${item[0].listing.price} per night</div>
             { /*  <img src={item[0].listing.thumbnail } /> <p>{item[0].listing.thumbnail.slice(0, 5)}</p> */ }
             { item[0].listing.thumbnail.slice(0, 4) === 'data'
               ? <img src={item[0].listing.thumbnail } />
               : <embed src={item[0].listing.thumbnail }/>}<br/>
-              <button className='buttonStyle' onClick={() => { getSpecific(item[1]) }}>get detail</button>
+              <div className='center'><button className='btnStyle' onClick={() => { getSpecific(item[1]) }}>get detail</button></div>
             <hr/>
           </div>
         </div>

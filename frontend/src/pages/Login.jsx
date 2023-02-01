@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/loginregister.css'
+import '../styles/logsignstyle.css'
 
 const Login = () => {
   const [email, setEmail] = React.useState('')
@@ -27,13 +27,13 @@ const Login = () => {
 
   return (
     <div>
-      <div className='login-signup-title'>Log in</div>
-      <div className='login-signup-part'>
-        <div className='login-signup-word'>email:</div>
-        <input className='login-signup-input' type='text' onChange={(event) => { setEmail(event.target.value) }} value={email} /><br/>
-        <div className='login-signup-word'>password:</div>
-        <input className='login-signup-input' type='password' onChange={(event) => { setPwd(event.target.value) }} value={pwd} /><br/>
-        <button className='login-signup-button' onClick={loginBtn}>Login</button>
+      <div className='logsign-title'>Log in</div>
+      <div className='logsign-part'>
+        <div className='logsign-word'>Email:</div>
+        <input className='logsign-input' type='text' onChange={(event) => { setEmail(event.target.value) }} value={email} /><br/>
+        <div className='logsign-word'>Password:</div>
+        <input className='logsign-input' type='password' onChange={(event) => { setPwd(event.target.value) }} value={pwd} /><br/>
+        <button className='logsign-button' onClick={loginBtn}>Log in</button>
       </div>
     </div>
   )

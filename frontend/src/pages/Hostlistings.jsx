@@ -3,9 +3,9 @@ import Createlist from '../components/Createlist';
 import Publishdate from '../components/Publishdate';
 import UpdateList from '../components/Updatelist';
 import '../styles/picture.css'
-import '../styles/Welcomestyle.css'
+import '../styles/mainStyle.css'
 
-const Hostedlistings = () => {
+const Hostlistings = () => {
   const [createVisible, setCreateVisible] = React.useState(false)
   const [allIdList, setAllIdList] = React.useState([])
   const [allInfoList, setAllInfoList] = React.useState([])
@@ -77,7 +77,7 @@ const Hostedlistings = () => {
       alert(data.error)
     } else {
       console.log(data)
-      window.location.href = '/Hostedlistings'
+      window.location.href = '/Hostlistings'
     }
   }
 
@@ -144,6 +144,10 @@ const Hostedlistings = () => {
     setAllBookList(bookList)
   }
   console.log(allBookList)
+
+  useEffect(() => {
+    getBookList()
+  }, [])
 
   useEffect(() => {
     getAllInfo2()
@@ -219,11 +223,13 @@ const Hostedlistings = () => {
         if (i[1].status === 'accepted') {
           price = price + parseInt(i[1].totalPrice)
         }
-        console.log(i[1].dateRange[1])
-        const day1 = Date.parse(i[1].dateRange[1])
-        const day2 = Date.parse(i[1].dateRange[0])
-        const dayy = parseInt((day1 - day2) / (1000 * 3600 * 24))
-        day = day + dayy
+        if (i[1].status === 'accepted') {
+          console.log(i[1].dateRange[1])
+          const day1 = Date.parse(i[1].dateRange[1])
+          const day2 = Date.parse(i[1].dateRange[0])
+          const dayy = parseInt((day1 - day2) / (1000 * 3600 * 24))
+          day = day + dayy
+        }
       }
     }
     j.push(price)
@@ -243,7 +249,7 @@ const Hostedlistings = () => {
       alert(data.error)
     } else {
       console.log(data)
-      window.location.href = '/Hostedlistings'
+      window.location.href = '/Hostlistings'
     }
   }
 
@@ -258,7 +264,7 @@ const Hostedlistings = () => {
       alert(data.error)
     } else {
       console.log(data)
-      window.location.href = '/Hostedlistings'
+      window.location.href = '/Hostlistings'
     }
   }
 
@@ -269,46 +275,50 @@ const Hostedlistings = () => {
       {publishVisible && <Publishdate publishVisible={publishVisible} setPublishVisible={setPublishVisible} />}
       {allInfoList.map(item => (
         <div key={item[1]}>
-          <div className='titleStyle'>{item[0].listing.title}</div>
+          <div className='tiStyle'>{item[0].listing.title}</div>
           <div>
-            <span className='spanStyle2'>{item[0].listing.metadata[0]}bedrooms, </span>
-            <span className='spanStyle2'>{item[0].listing.metadata[1]}beds, </span>
-            <span className='spanStyle2'>{item[0].listing.metadata[2]}bathrooms</span>
-            <div className='spanStyle2'>${item[0].listing.price} per night</div>
+            <div className='wordStyle2'>
+              <span>{item[0].listing.metadata[0]}bedrooms, </span>
+              <span>{item[0].listing.metadata[1]}beds, </span>
+              <span>{item[0].listing.metadata[2]}bathrooms</span>
+            </div>
+            <div className='wordStyle2'>${item[0].listing.price} per night</div>
             { /*  <img src={item[0].listing.thumbnail } /> <p>{item[0].listing.thumbnail.slice(0, 5)}</p> */ }
             { item[0].listing.thumbnail.slice(0, 4) === 'data'
               ? <img src={item[0].listing.thumbnail } />
               : <embed src={item[0].listing.thumbnail }/>}<br/>
-            <button className='buttonStyle' onClick={() => editFun(item[1])}>edit</button>
-            <button className='buttonStyle' onClick={() => deleteList(item[1])}>delete</button>
-            <button className='buttonStyle' onClick={() => publishList(item[1])}>publish</button>
-            <button className='buttonStyle' onClick={() => unPublishList(item[1])}>unpublish</button>
+            <div className='center'>
+              <button className='btnStyle' onClick={() => editFun(item[1])}>edit</button>
+              <button className='btnStyle' onClick={() => deleteList(item[1])}>delete</button>
+              <button className='btnStyle' onClick={() => publishList(item[1])}>publish</button>
+              <button className='btnStyle' onClick={() => unPublishList(item[1])}>unpublish</button>
+            </div>
           </div>
           <hr/>
         </div>
       ))}
       <div>
-        <button className='buttonStyle2' onClick={getBookList}>show booking</button>
-        <button className='buttonStyle2' onClick={() => setCreateVisible(!createVisible)}>create new list</button>
+        <button className='btnStyle2' onClick={() => setCreateVisible(!createVisible)}>create new list</button>
+        <div className='tiStyle'>Booked lists</div>
         {totalList3.map(item => (
           <div key={item[0]}>
-            <h3>{item[0]}</h3>
-            <div>has been published for {item[1]} days</div>
-            <div>has earned {item[2]} dollars this year</div>
-            <div>has been predicted for {item[3]} days this year</div>
+            <div className='tiStyle2'>{item[0]}</div>
+            <div className='wordStyle2'>has been published for {item[1]} days</div>
+            <div className='wordStyle2'>has earned {item[2]} dollars in tota;</div>
+            <div className='wordStyle2'>has been booked for {item[3]} days in total</div>
             {item[4].map(item2 => (
               <div key={item2}>
                 <hr/>
-                <div>has been booked from {item2[1].dateRange[0]} to {item2[1].dateRange[1]}</div>
-                <div>total price : {item2[1].totalPrice}</div>
+                <div className='wordStyle2'>has been booked from {item2[1].dateRange[0]} to {item2[1].dateRange[1]}</div>
+                <div className='wordStyle2'>total price : {item2[1].totalPrice}</div>
                 {item2[1].status === 'pending'
                   ? (
-              <div>
-                <button onClick={() => getAccept(item2[1].id)}>accept</button>
-                <button onClick={() => getDecline(item2[1].id)}>decline</button>
+              <div className='wordStyle2'>
+                <button className='btnStyle' onClick={() => getAccept(item2[1].id)}>accept</button>
+                <button className='btnStyle' onClick={() => getDecline(item2[1].id)}>decline</button>
               </div>
                     )
-                  : <div>Status: {item2[1].status}</div> }
+                  : <div className='wordStyle2'>Status: {item2[1].status}</div> }
               </div>
             ))}
           <hr/>
@@ -319,4 +329,4 @@ const Hostedlistings = () => {
   )
 }
 
-export default Hostedlistings
+export default Hostlistings

@@ -3,6 +3,7 @@ import Filterresult from '../components/Filterresult';
 import Filterresult2 from '../components/Filterresult2';
 import Filterresult3 from '../components/Filterresult3';
 import Filterresult4 from '../components/Filterresult4';
+import '../styles/mainStyle.css'
 
 const Filter = () => {
   const [title, setTitle] = React.useState('')
@@ -55,23 +56,30 @@ const Filter = () => {
       {filterVisible2 && <Filterresult2 filterVisible2={filterVisible2} setFilterVisible2={setFilterVisible2} />}
       {filterVisible3 && <Filterresult3 filterVisible3={filterVisible3} setFilterVisible3={setFilterVisible3} />}
       {filterVisible4 && <Filterresult4 filterVisible4={filterVisible4} setFilterVisible4={setFilterVisible4} />}
-      <span>title or address: </span><input type = 'text' onChange={(event) => { setTitle(event.target.value) } } value={title} /><br/>
-      <button onClick={getFilter1}>Go!!</button><br/>
-      <span>min price: </span><input type = 'text' onChange={(event) => { setPrice1(event.target.value) } } value={price1} />
-      <span>max price: </span><input type = 'text' onChange={(event) => { setPrice2(event.target.value) } } value={price2} /><br/>
-      <button onClick={getFilter2}>Go!!</button><br/>
-      <span>min bedroom: </span><input type = 'text' onChange={(event) => { setRoom1(event.target.value) } } value={room1} />
-      <span>max bedroom: </span><input type = 'text' onChange={(event) => { setRoom2(event.target.value) } } value={room2} /><br/>
-      <button onClick={getFilter3}>Go!!</button><br/>
-      <span>from: </span>
-      <span>year</span><input type='text' onChange={(event) => { setYear1(event.target.value) } } value={year1} />
-      <span>month</span><input type='text' onChange={(event) => { setMonth1(event.target.value) } } value={month1} />
-      <span>day</span><input type='text' onChange={(event) => { setDay1(event.target.value) } } value={day1} /><br/>
-      <span>to: </span>
-      <span>year</span><input type='text' onChange={(event) => { setYear2(event.target.value) } } value={year2} />
-      <span>month</span><input type='text' onChange={(event) => { setMonth2(event.target.value) } } value={month2} />
-      <span>day</span><input type='text' onChange={(event) => { setDay2(event.target.value) } } value={day2} /><br/>
-      <button onClick={getFilter4}>Go!!</button>
+      <h3 className='center' style={ { marginTop: '10px' }}>Please choose one feature to search the listing you want:</h3>
+      <div className='filterStyle'><span>title or address: </span><input type = 'text' onChange={(event) => { setTitle(event.target.value) } } value={title} /></div>
+      <div className='center' style={ { marginBotton: '20px' }}><button className='goStyle' onClick={getFilter1}>Go!!</button></div>
+      <div className='filterStyle'>
+        <span>min price: </span><input type = 'text' onChange={(event) => { setPrice1(event.target.value) } } value={price1} />
+        <span>max price: </span><input type = 'text' onChange={(event) => { setPrice2(event.target.value) } } value={price2} />
+      </div>
+      <div className='center'><button className='goStyle' onClick={getFilter2}>Go!!</button></div>
+      <div className='filterStyle'>
+        <span>min bedroom: </span><input type = 'text' onChange={(event) => { setRoom1(event.target.value) } } value={room1} />
+        <span>max bedroom: </span><input type = 'text' onChange={(event) => { setRoom2(event.target.value) } } value={room2} />
+      </div>
+      <div className='center'><button className='goStyle' onClick={getFilter3}>Go!!</button></div>
+      <div className='filterStyle'>
+        <span>from: </span>
+        <span>year</span><input type='text' onChange={(event) => { setYear1(event.target.value) } } value={year1} />
+        <span>month</span><input type='text' onChange={(event) => { setMonth1(event.target.value) } } value={month1} />
+        <span>day</span><input type='text' onChange={(event) => { setDay1(event.target.value) } } value={day1} /><br/>
+        <span>to: </span>
+        <span>year</span><input type='text' onChange={(event) => { setYear2(event.target.value) } } value={year2} />
+        <span>month</span><input type='text' onChange={(event) => { setMonth2(event.target.value) } } value={month2} />
+        <span>day</span><input type='text' onChange={(event) => { setDay2(event.target.value) } } value={day2} />
+      </div>
+      <div className='center'><button className='goStyle' onClick={getFilter4}>Go!!</button></div>
     </>
   )
 }

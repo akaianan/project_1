@@ -25,7 +25,7 @@ const Publishdate = ({ publishVisible, setPublishVisible }) => {
     } else {
       console.log(data)
       alert('Publish successfully!')
-      window.location.href = '/Hostedlistings'
+      window.location.href = '/Hostlistings'
     }
   }
   return (

@@ -59,7 +59,7 @@ const UpdateList = ({ editVisible, setEditVisible }) => {
       alert(data.error)
     } else {
       console.log(data)
-      window.location.href = '/Hostedlistings'
+      window.location.href = '/Hostlistings'
     }
   }
 

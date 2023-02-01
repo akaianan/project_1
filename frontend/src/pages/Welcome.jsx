@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Welcomestyle.css'
+import '../styles/mainStyle.css'
 import { Button } from '@material-ui/core'
 
 const Welcome = () => {
@@ -19,12 +19,12 @@ const Welcome = () => {
     }
   }
   return (
-    <>
-      <div className='welcomeStyle'>Welcome!</div>
-      <Button color="secondary" onClick={() => { window.location.href = '/Hostedlistings' }}>hosted listings</Button>
+    <div className='center'>
+      <div className='welSty'>Welcome!</div>
+      <Button color="secondary" onClick={() => { window.location.href = '/Hostlistings' }}>host listings</Button>
       <Button color="secondary" onClick={() => { window.location.href = '/Landing' }}>all listings</Button>
       <Button color="secondary" onClick={logoutBtn}>logout</Button>
-    </>
+    </div>
   )
 }
 
