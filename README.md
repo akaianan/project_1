@@ -3,7 +3,7 @@
 
 ### The Frontend
 
-TO run the frontend server, please navigate to the `frontend` folder and run `npm install`, then run `npm start` to start the ReactJS app.
+To run the frontend server, please navigate to the `frontend` folder and run `npm install`, then run `npm start` to start the ReactJS app.
 
 ### The Backend 
 
@@ -13,7 +13,7 @@ To view the API interface for the backend you can navigate to the base URL of th
 
 The port that the backend runs on is in `frontend/src/config.js`. You can change the port in this file. 
 
-# 2. The Project of renting house
+# 2. The function of renting house
 
 # 2.1 Login and Register
  * Users are able to choose `LOG IN` or `SIGN UP` in home page.
