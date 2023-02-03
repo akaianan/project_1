@@ -304,7 +304,7 @@ const Hostlistings = () => {
           <div key={item[0]}>
             <div className='tiStyle2'>{item[0]}</div>
             <div className='wordStyle2'>has been published for {item[1]} days</div>
-            <div className='wordStyle2'>has earned {item[2]} dollars in tota;</div>
+            <div className='wordStyle2'>has earned {item[2]} dollars in total</div>
             <div className='wordStyle2'>has been booked for {item[3]} days in total</div>
             {item[4].map(item2 => (
               <div key={item2}>
