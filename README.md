@@ -1,5 +1,5 @@
 
-### Getting Started
+# 1. Getting Started
 
 ### The Frontend
 
@@ -13,7 +13,7 @@ To view the API interface for the backend you can navigate to the base URL of th
 
 The port that the backend runs on is in `frontend/src/config.js`. You can change the port in this file. 
 
-# 2. The function of renting house
+# 2. The function of this renting house website
 
 # 2.1 Login and Register
  * Users are able to choose `LOG IN` or `SIGN UP` in home page.
