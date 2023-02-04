@@ -3,11 +3,11 @@
 
 ### The Frontend
 
-To run the frontend server, please navigate to the `frontend` folder and run `npm install`, then run `npm start` to start the ReactJS app.
+To run the frontend server, please navigate to the `frontend` folder and run `yarn install` or `npm install`, then run `yarn install` or `npm start` to start the ReactJS app.
 
 ### The Backend 
 
-To run the backend server, please navigate to the `backend` folder and run `npm install`, then run `npm start` to start the backend.
+To run the backend server, please navigate to the `backend` folder and run `yarn install` or `npm install`, then run `yarn install` or `npm start` to start the backend.
 
 To view the API interface for the backend you can navigate to the base URL of the backend (`http://localhost:5005`). 
 
