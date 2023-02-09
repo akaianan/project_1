@@ -82,9 +82,9 @@ const Createlist = ({ createVisible, setCreateVisible }) => {
       <div className='backGround2'>
         <div className='popupClose' onClick={() => setCreateVisible(!createVisible)}>×</div>
         <span className='popupSpan'>Title: </span>
-        <input type='text' id='title' onChange={(event) => { setTitle(event.target.value) }} value={title} /><br/>
+        <input type='text' id='title' name='title' onChange={(event) => { setTitle(event.target.value) }} value={title} /><br/>
         <span className='popupSpan'>Address: </span>
-        <input type='text' id='address' onChange={(event) => { setAddress(event.target.value) }} value={address} /><br/>
+        <input type='text' id='address' name='address' onChange={(event) => { setAddress(event.target.value) }} value={address} /><br/>
         <span className='popupSpan'>Property Type: </span>
         <input type='text' id='property' onChange={(event) => { setProperty(event.target.value) }} value={property} /><br/>
         <span className='popupSpan'>Price: </span>
@@ -115,7 +115,7 @@ const Createlist = ({ createVisible, setCreateVisible }) => {
         <input type='text' id='bath-number' onChange={(event) => { setBathNum(event.target.value) }} value={bathNum} /><br/>
         <span className='popupSpan'>Property amenities: </span>
         <input type='text' id='amen' onChange={(event) => { setAmen(event.target.value) }} value={amen} /><br/>
-        <button className='popupButton' onClick={createBtn}>Create it!!</button>
+        <button className='popupButton' name='create-it' onClick={createBtn}>Create it!!</button>
       </div>
     </div>
   )

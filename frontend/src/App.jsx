@@ -13,8 +13,8 @@ const Home = () => {
   return (
     <div className='center'>
       <div className='home'>Home</div>
-      <span className='btn1'><Link to='/Login'>Log in</Link></span>
-      <span className='btn2'><Link to='/Signup'>Sign up</Link></span>
+      <span className='btn1' name='log'><Link to='/Login'>Log in</Link></span>
+      <span className='btn2' name='sign'><Link to='/Signup'>Sign up</Link></span>
       <div className='booking'>Booking what you like!</div>
     </div>
   )

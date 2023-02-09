@@ -298,12 +298,12 @@ const Hostlistings = () => {
         </div>
       ))}
       <div>
-        <button className='btnStyle2' onClick={() => setCreateVisible(!createVisible)}>create new list</button>
+        <button className='btnStyle2' name='create-new' onClick={() => setCreateVisible(!createVisible)}>create new list</button>
         <div className='tiStyle'>Booked lists</div>
         {totalList3.map(item => (
           <div key={item[0]}>
             <div className='tiStyle2'>{item[0]}</div>
-            <div className='wordStyle2'>has been published for {item[1]} days</div>
+            <div className='wordStyle2'>has been published for {item[1]} days</div>+
             <div className='wordStyle2'>has earned {item[2]} dollars in total</div>
             <div className='wordStyle2'>has been booked for {item[3]} days in total</div>
             {item[4].map(item2 => (

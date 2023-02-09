@@ -42,7 +42,7 @@ const Bookdate = (props) => {
   return (
     <div className='wordStyle2'>
       <div style={{ fontStyle: 'italic', color: 'blue' }}>Please input the date within the date range, otherwise the hosts will reject your application. </div>
-      <span>from: </span><br/>
+      <span>from:</span><br/>
       <span>year:</span><input type='text' onChange={ (event) => setYear1(event.target.value) } value={year1} />
       <span>month:</span><input type='text' onChange={ (event) => setMonth1(event.target.value) } value={month1} />
       <span>day:</span><input type='text' onChange={ (event) => setDay1(event.target.value) } value={day1} /><br/>

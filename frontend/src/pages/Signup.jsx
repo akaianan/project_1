@@ -36,14 +36,14 @@ const Signup = () => {
       <div className='logsign-title'>Sign up</div>
       <div className='logsign-part'>
         <div className='logsign-word'>Email:</div>
-        <input className='logsign-input' type='text' onChange={(event) => { setEmail(event.target.value) }} value={email} /><br/>
+        <input className='logsign-input' name='email1' type='text' onChange={(event) => { setEmail(event.target.value) }} value={email} /><br/>
         <div className='logsign-word'>Name:</div>
-        <input className='logsign-input' type='text' onChange={(event) => { setName(event.target.value) }} value={name} /><br/>
+        <input className='logsign-input' name='name1' type='text' onChange={(event) => { setName(event.target.value) }} value={name} /><br/>
         <div className='logsign-word'>Password:</div>
-        <input className='logsign-input' type='password' onChange={(event) => { setPwd(event.target.value) }} value={pwd} /><br/>
+        <input className='logsign-input' name='pwd1' type='password' onChange={(event) => { setPwd(event.target.value) }} value={pwd} /><br/>
         <div className='logsign-word'>Confirm Password:</div>
-        <input className='logsign-input' type='password' onChange={(event) => { setConfirmPwd(event.target.value) }} value={confirmPwd} /><br/>
-        <button className='logsign-button' onClick={signupBtn}>sign up</button>
+        <input className='logsign-input' name='pwd2' type='password' onChange={(event) => { setConfirmPwd(event.target.value) }} value={confirmPwd} /><br/>
+        <button className='logsign-button' name='sign-btn' onClick={signupBtn}>sign up</button>
       </div>
     </div>
   )

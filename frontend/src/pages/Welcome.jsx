@@ -21,9 +21,9 @@ const Welcome = () => {
   return (
     <div className='center'>
       <div className='welSty'>Welcome!</div>
-      <Button color="secondary" onClick={() => { window.location.href = '/Hostlistings' }}>host listings</Button>
-      <Button color="secondary" onClick={() => { window.location.href = '/Landing' }}>all listings</Button>
-      <Button color="secondary" onClick={logoutBtn}>logout</Button>
+      <Button color="secondary" name='host' onClick={() => { window.location.href = '/Hostlistings' }}>host listings</Button>
+      <Button color="secondary" name='all' onClick={() => { window.location.href = '/Landing' }}>all listings</Button>
+      <Button color="secondary" name='out' onClick={logoutBtn}>logout</Button>
     </div>
   )
 }

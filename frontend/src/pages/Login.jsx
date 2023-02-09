@@ -30,10 +30,10 @@ const Login = () => {
       <div className='logsign-title'>Log in</div>
       <div className='logsign-part'>
         <div className='logsign-word'>Email:</div>
-        <input className='logsign-input' type='text' onChange={(event) => { setEmail(event.target.value) }} value={email} /><br/>
+        <input className='logsign-input' name='email' type='text' onChange={(event) => { setEmail(event.target.value) }} value={email} /><br/>
         <div className='logsign-word'>Password:</div>
-        <input className='logsign-input' type='password' onChange={(event) => { setPwd(event.target.value) }} value={pwd} /><br/>
-        <button className='logsign-button' onClick={loginBtn}>Log in</button>
+        <input className='logsign-input' name='pwd' type='password' onChange={(event) => { setPwd(event.target.value) }} value={pwd} /><br/>
+        <button className='logsign-button' name='log-btn' onClick={loginBtn}>Log in</button>
       </div>
     </div>
   )
