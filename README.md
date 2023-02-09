@@ -14,10 +14,10 @@ To view the API interface for the backend you can navigate to the base URL of th
 The port that the backend runs on is in `frontend/src/config.js`. You can change the port in this file. 
 
 ### component testing
-To run the component testing, please navigate to the `frontend` folder and run `yarn test`.
+To run the component testing, please navigate to the `frontend` folder and run `yarn test`. If the test has not started, please type `a`.
 
 ### UI testing using cypress
-To run the UI testing, please navigate to the `cypress` folder and run `yarn run cypress open`.
+To run the UI testing, please navigate to the `cypress` folder and run `yarn add -D cypress`, then run `yarn run cypress open`.
 
 # 2. The function of this renting house website
 
